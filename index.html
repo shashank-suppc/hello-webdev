@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After pseudo selectors</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            
+            
+        }
+        header::before{
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.9;
+            background-color: rgb(13, 13, 13);
+            color:white;
+        }
+        
+        section {
+            background-image:url("Screenshot 2024-07-06 154215.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: 2px solid purple;
+           text-wrap:balance;
+           height: 120vh;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           padding: 5px;
+           line-height: 1.9em;
+           text-align: center;
+        }
+        .navigation{
+            display:flex;
+            
+        }
+        
+        h3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            text-wrap: balance;
+        }
+        header p{
+            text-align: center;
+            text-wrap: balance;
+        }
+        .item{
+            list-style: none;
+           font-size: 30px;
+            padding: 25px;
+            padding-bottom: 20px;
+
+        }
+        header li:nth-child(2n+1){
+            color:red;
+            
+        }
+       aside h3{
+    font-size: 4rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-container{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .flex-container > div {
+        background-color: #f1f1f1;
+        width: 30%;
+        height:200px;
+        margin: 1.5%;
+        border:2px solid rgb(31, 30, 30);
+        border-radius: 8px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+}
+
+        
+        
+    
+        
+    </style>
+</head>
+
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="navigation">
+            <li class="item">Home</li>
+            <li class="item">About</li>
+            <li class="item">Services</li>
+            <li class="item">Contact us</li>
+        </ul>
+    </nav>
+</header>
+        <section>
+            <h3>
+                Welcome to Coding World.
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, rerum dolor recusandae eligendi facere
+                doloribus dolores eaque nemo quaerat cumque praesentium maxime minima voluptatem amet harum excepturi
+                natus minus sapiente?
+            </p>
+        </section>
+        <aside>
+        <h3>
+            Explore the Best Courses
+        </h3>
+        <div class="flex-container">
+            <div class="items-1"></div>
+            <div class="items-2"></div>
+            <div class="items-3"></div>
+            <div class="items-4"></div>
+            <div class="items-5"></div>
+            <div class="items-6"></div>
+            <div class="items-7"></div>
+            <div class="items-8"></div>
+            <div class="items-9"></div>
+        </div>
+    </aside>
+
+</body>
+
+</html>
